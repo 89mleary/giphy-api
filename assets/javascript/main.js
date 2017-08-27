@@ -48,13 +48,13 @@ $( document ).ready(function() {  // doc ready start
 
         var animalImage = $("<img>");
         animalImage.addClass("gif");
-        animalImage.attr("src", results[i].images.fixed_width_still.source);
+        animalImage.attr("src", results[i].images.fixed_width_still.url);
 
         animalImage.attr("data-state", "still");
 
-        var animalImageStill = results[i].images.fixed_width_still.source;
+        var animalImageStill = results[i].images.fixed_width_still.url;
         animalImage.attr("data-still", animalImageStill);
-        var animalImageAnimated = results[i].images.fixed_width.source;
+        var animalImageAnimated = results[i].images.fixed_width.url;
         animalImage.attr("data-animated", animalImageAnimated);
 
         $(animalDiv).append(p);
