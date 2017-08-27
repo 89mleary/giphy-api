@@ -37,7 +37,7 @@ $( document ).ready(function() {  // doc ready start
     }).done(function(response) { // ajax done resopnse start
 
       var results = response.data;
-
+      console.log(results);
       for (var i = 0; i < results.length; i++) {
 
         var animalDiv = $("<div>");
@@ -48,13 +48,13 @@ $( document ).ready(function() {  // doc ready start
 
         var animalImage = $("<img>");
         animalImage.addClass("gif");
-        animalImage.attr("src", results[i].images.fixed_width_still.url);
+        animalImage.attr("src", results[i].images.fixed_width_still.source);
 
         animalImage.attr("data-state", "still");
 
-        var animalImageStill = results[i].images.fixed_width_still.url;
+        var animalImageStill = results[i].images.fixed_width_still.source;
         animalImage.attr("data-still", animalImageStill);
-        var animalImageAnimated = results[i].images.fixed_width.url;
+        var animalImageAnimated = results[i].images.fixed_width.source;
         animalImage.attr("data-animated", animalImageAnimated);
 
         $(animalDiv).append(p);
